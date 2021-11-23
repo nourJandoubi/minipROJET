@@ -7,18 +7,22 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
+import { DetailHotelComponent } from './detail-hotel/detail-hotel.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     AcceuilComponent,
     LoginComponent,
-    MenuComponent
+    MenuComponent,
+    DetailHotelComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

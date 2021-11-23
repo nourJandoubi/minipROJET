@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Hotel } from '../hotel';
 import { HotelsService } from '../hotels.service';
 
@@ -9,7 +10,9 @@ import { HotelsService } from '../hotels.service';
 })
 export class AcceuilComponent implements OnInit {
  listHotel:Hotel[]=[];
-  constructor( private hotelService:HotelsService) { }
+ rating=0;
+  constructor( private hotelService:HotelsService, config: NgbRatingConfig) {config.max = 5;
+    config.readonly = true; }
 
   ngOnInit(): void {
    this.listHotel= this.hotelService.getHotel();
